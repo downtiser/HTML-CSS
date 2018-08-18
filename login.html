@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>log in</title>
+</head>
+<body>
+    <form action="http://localhost:6080/index" method="get">  <!--生成表单 action指定点击提交按钮后将表单发往何处-->
+        <!--method指定表单提交方式，get会将数据内容拼接在URL中发送给服务端，所以提交后在地址末尾能看到提交的信息-->
+        <div>User Name:</div>
+        <input type="text" name="user" title="input your user name"/>
+        <!--不同类型的输入框-->
+        <div>Password:</div>
+        <input type="password" name="password" title="input your password"/>
+        <div>Email:</div>
+        <input type="email" name="email" title="input your email" />
+        <!--name用于标记该输入框，便于提交表单后服务端查找数据，title中的内容会在鼠标移至输入框时弹出一个小标签显示该内容-->
+        <br />
+        <input type="button" value="Log in" />
+        <input type="submit" value="Real Log in" />
+        <!--提交表单按钮-->
+    </form>
+    <br />
+    <form action="http://localhost:6080/index" method="post">
+        <!--post方式将数据放在请求体中发送给服务端，在地址栏里看不见内容-->
+        <div>User Name:</div>
+        <input type="text" name="user" title="input your user name" />
+        <div>Password:</div>
+        <input type="password" name="password" title="input your password" />
+        <div>Email:</div>
+        <input type="email" name="email" title="input your email" />
+        <br />
+        <input type="button" value="Log in" />
+        <input type="submit" value="Real Log in" />
+    </form>
+</body>
+</html>

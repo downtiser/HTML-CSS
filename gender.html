@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <div>
+            <div>请选择您的性别</div>
+            Male:<input type="radio" name="gender" value="Male" checked="checked" /> <!--checked 指明该选框默认被选上-->
+            <!--radio 设置输入内容为点选 为多个radio设置相同的name，那么只能选择其中的一个-->
+            Female:<input type="radio" name="gender" value="Female" />
+            <!--value用于让服务后台获取用户点选选项的内容-->
+            Others:<input type="radio" name="gender" value="Others" />
+        </div>
+        <div>
+            <div>请选择您的爱好:</div>
+            看书:<input type="checkbox" name="hobby" value="1" checked="checked"/>
+            写代码:<input type="checkbox" name="hobby" value="2" />
+            玩游戏:<input type="checkbox" name="hobby" value="3" />
+            游泳:<input type="checkbox" name="hobby" value="4" />
+            <div>请选择您的技能</div>
+            python：<input type="checkbox" name="lang" value="1" />
+            c：<input type="checkbox" name="lang" value="2" />
+            c++：<input type="checkbox" name="lang" value="3" />
+            c#：<input type="checkbox" name="lang" value="4" />
+            <div>请选择您要上传的文件:</div>
+            <input type="file" name="userfile" />
+        </div>
+        <input type="submit" value="Submit" />
+        <!--在嵌套标签中提交只会提交input里的内容-->
+        <input type="reset" value="重置">
+        <!--reset按钮会清空表单中用户所有的输入-->
+    </form>
+</body>
+</html>

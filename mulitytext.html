@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <div>
+            <div>请输入:</div>
+            <textarea name="texts">请输入内容</textarea>
+            <div>请选择:</div>
+            <select name="province">
+                <option value="1" selected="selected">浙江省</option>
+                <option value="2">河南省</option>
+                <option value="3">河北省</option>
+            </select>
+            <div>请选择省份:</div>
+            <select name="province2" multiple="multiple" size="4"> <!--multiple设置可多选，size设置页面显示条数 web上用crtl多选-->
+                <option value="1" selected="selected">浙江省</option> <!--selected 设置默认选择值-->
+                <option value="2">河南省</option>
+                <option value="3">河北省</option>
+            </select>
+            <div>请选择</div>
+            <select name="province3">
+                <optgroup label="浙江省"> <!--为标签分组-->
+                    <option value="1">杭州市</option>
+                    <option value="2">温州市</option>
+                </optgroup>
+                <optgroup label="江苏省">
+                    <option value="3">苏州市</option>
+                    <option value="4">徐州市</option>
+                </optgroup>
+            </select>
+        </div>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="重置">
+    </form>
+</body>
+</html>
