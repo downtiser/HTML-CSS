@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Index</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .index-header {
+            background-color: #24292e;
+        }
+
+        .header-tags {
+            background-color: #24292e;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .inner-bar {
+            background-color: #24292e;
+            width: 1300px;
+            margin: 0 auto
+        }
+
+        .header-tags a {
+            color: aliceblue;
+            margin-right: 12px;
+        }
+
+        .logo-headers {
+            margin-bottom: 30px;
+        }
+
+        #search {
+            height: 25px;
+            width: 200px;
+        }
+
+        .search-items {
+            float: right;
+            margin-top: 35px;
+            margin-right: 100px;
+        }
+
+        #search-box, #search-button {
+            float: right;
+        }
+
+        .search-words {
+            float: left;
+            font-size: 13px;
+            display: block;
+            font-weight: lighter;
+        }
+
+        .page-type1 {
+            background-color: dimgrey;
+            color: rgba(255, 255, 255, 0.75);
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            font-size: 15px;
+            float: left;
+        }
+
+        .page-type1 a {
+            color: aliceblue;
+            margin-left: 10px;
+        }
+
+        .page-type2 {
+            background-color: #000000;
+            color: rgba(255, 255, 255, 0.75);
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            font-size: 15px;
+            float: right;
+        }
+
+        .page-type2 a {
+            color: aliceblue;
+            margin-right: 10px;
+        }
+
+        .informations {
+            width: 1300px;
+            margin: 0 auto;
+        }
+
+        .side-bar {
+            float: left;
+
+
+        }
+
+        .stuff-catalog {
+            width: 246px;
+            border-bottom: 2px solid #24292e;
+            border-left: 2px solid grey;
+            border-right: 2px solid grey;
+            background-color: lightsteelblue;
+        }
+
+        .stuff-catalog .title {
+            font-size: 17px;
+            padding-top: 5px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .stuffs span {
+            display: inline-block;
+            font-size: 15px;
+            padding-top: 5px;
+            padding-bottom: 6px;
+            margin-left: 10px;
+            font-weight: lighter;
+        }
+
+        .stuff-catalog a {
+            color: #000000;
+        }
+        .ranking-list{
+            background-color: lightgrey;
+            margin-top: 15px;
+
+        }
+        #rank-title{
+            color: #24292e;
+            height: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+            border: 2px solid #24292e;
+        }
+        .list-items{
+            color: #24292e;
+            font-size: 15px;
+            height: 30px;
+            border-bottom: 2px solid #24292e;
+            border-left: 2px solid #24292e;
+            border-right: 2px solid #24292e;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+        .info-top-bar{
+            float: right;
+            width: 1025px;
+            /*border: 2px solid red;*/
+            margin-top: 8px;
+        }
+        .top-bar-info{
+            float: left;
+        }
+        .top-bar-info a{
+            color: #24292e;
+            font-size: 13px;
+            font-weight: bold;
+
+        }
+        .selected-info{
+            width: 950px;
+            margin: 0 auto;
+            border-bottom: 2px solid dimgrey;
+        }
+        .selected-title,.selected-stuff-info{
+            float: left;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        .selected-stuff-info a{
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 1px;
+            font-weight: lighter;
+        }
+        #selected-bottom{
+            width: 150px;
+            height: 30px;
+            border: 2px solid #24292e;
+            border-top: 3px solid white;
+            margin: 0 auto;
+            margin-top: -3px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .order{
+            float: left;
+            height: 30px;
+            width: 50px;
+            font-size: 17px;
+            font-weight: bold;
+            margin-left: 10px;
+            line-height: 30px;
+            padding-right: 20px
+        }
+        .order select{
+            height: 26px;
+        }
+        .order2{
+            float: right;
+            height: 30px;
+            width: 50px;
+            font-size: 17px;
+            line-height: 30px;
+        }
+        .stuff-item{
+            float: left;
+            height: 265px;
+            width: 190px;
+            border: 1px solid lightgrey;
+            margin-left: 5px;
+        }
+        .icons{
+            height: 200px;
+            width: 190px;
+        }
+        .stuff-description{
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .stuff-description a{
+            font-size: 18px;
+        }
+        .price-operation{
+            width: 180px;
+            margin: 0 auto;
+        }
+        .price{
+            height: 20px;
+            float: left;
+            font-size: 18px;
+        }
+        .operation{
+            float: right;
+            margin-right: 10px;
+        }
+        .operation input{
+            width: 23px;
+            height: 22px;
+        }
+
+    </style>
+</head>
+<body style="margin: 0 auto"> <!--不设置边界，使页面上方没有空白-->
+<div class="index-header">
+    <div class="inner-bar">
+        <div class="header-tags" style="float: left">
+            <a href="">收藏本站</a>
+        </div>
+        <div class="header-tags" style="float: right">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="">我的订单</a>
+            <a href="">我的收藏</a>
+            <a href="">VIP俱乐部</a>
+            <label for="select-server"></label>
+            <select id="select-server" style="margin-right: 12px">
+                <option>客户服务</option>
+                <option>申请特权</option>
+                <option>联系客服</option>
+            </select>
+            <a href="">关注</a>
+            <a href="">手机版</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <!--<div style="clear: both"></div>-->
+</div>
+<div class="logo-headers">
+    <div style="width: 1300px;margin: 0 auto">
+        <div id="logo" style="float: left; margin-top: 20px;margin-left: 100px">
+            <img src="images/logo.jpg" style="height: 60px;width: 300px"/>
+        </div>
+        <div id="shopping-cart" style="float: right;margin-top: 35px; margin-right: 35px">
+            <select title="您的购物车" style="height: 31px">
+                <option>购物车 2 件</option>
+                <option>MineCraft</option>
+                <option>Horizon</option>
+            </select>
+        </div>
+        <div class="search-items">
+            <form action="">
+                <div id="search-button">
+                    <label for="search">
+                        <button type="submit"
+                                style="background: url(images/search.jpg);height: 31px;width: 95px"></button>
+                    </label>
+                </div>
+                <div id="search-box">
+                    <input id="search" type="text" style="margin-right: -6px" value="MineCraft">
+                    <br/>
+                    <div>
+                        <span class="search-words">搜索热词:&nbsp;</span>
+                        <span class="search-words">ROBOX&nbsp;</span>
+                        <span class="search-words">Plague Inc.&nbsp;</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+<div class="index-header">
+    <div class="inner-bar">
+        <div class="page-type1" style="width: 250px;">
+            <a href="" style=" margin-left: 0">全部商品分类</a>
+        </div>
+        <div class="page-type2" style="width: 80px; float: left">
+            <a href="">首页</a>
+        </div>
+        <div class="page-type1" style="padding-right: 10px">
+            <a href="">Top apps</a>
+            <a href="">Top games</a>
+            <a href="">Collections</a>
+            <a href="">Featured</a>
+            <a href="">Most popular</a>
+        </div>
+        <div class="page-type2">
+            <a href="">Favorite apps</a>
+            <a href="">Top 100</a>
+            <a href="">BBS</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+<div class="informations">
+    <div class="side-bar">
+        <div class="stuff-catalog">
+            <div class="title">Top paid apps</div>
+            <div class="stuffs">
+                <span>
+                    <a href="">WPS</a>
+                </span>
+                <span>
+                    <a href="">8ZIP</a>
+                </span>
+                <span>
+                    <a href="">ACGPlayer</a>
+                </span>
+            </div>
+        </div>
+        <div class="stuff-catalog">
+            <div class="title">Best Selling Games</div>
+            <div class="stuffs">
+                <span>
+                    <a href="">Asphalt</a>
+                </span>
+                <span>
+                    <a href="">EmpireCrash</a>
+                </span>
+                <span>
+                    <a href="">FallenSouls</a>
+                </span>
+            </div>
+            <div class="title">Best Rated Games</div>
+            <div class="stuffs">
+                <span>
+                    <a href="">Asphalt</a>
+                </span>
+                <span>
+                    <a href="">Empire</a>
+                </span>
+                <span>
+                    <a href="">Fallens</a>
+                </span>
+            </div>
+        </div>
+        <div class="stuff-catalog">
+            <div class="title">Best Selling Games</div>
+            <div class="stuffs">
+                <span>
+                    <a href="">Asphalt</a>
+                </span>
+                <span>
+                    <a href="">EmpireCrash</a>
+                </span>
+                <span>
+                    <a href="">FallenSouls</a>
+                </span>
+            </div>
+            <div class="title">Best Rated Games</div>
+            <div class="stuffs">
+                <span>
+                    <a href="">Asphalt</a>
+                </span>
+                <span>
+                    <a href="">Empire</a>
+                </span>
+                <span>
+                    <a href="">Fallens</a>
+                </span>
+            </div>
+        </div>
+        <div class="stuff-catalog">
+            <div class="title">Top paid apps</div>
+            <div class="stuffs">
+                <span>
+                    <a href="">WPS</a>
+                </span>
+                <span>
+                    <a href="">8ZIP</a>
+                </span>
+                <span>
+                    <a href="">ACGPlayer</a>
+                </span>
+            </div>
+        </div>
+        <div class="ranking-list">
+            <div id="rank-title">TOP 5 Games</div>
+            <div id="rank-contend">
+                <div class="list-items">
+                    <a href="">1.Glory</a>
+                </div>
+                <div class="list-items">
+                    <a href="">2.Noob</a>
+                </div>
+                <div class="list-items">
+                    <a href="">3.Loser</a>
+                </div>
+                <div class="list-items">
+                    <a href="">4.Lupus</a>
+                </div>
+                <div class="list-items">
+                    <a href="">5.Dome</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="info-top-bar">
+        <div class="top-bar-info">
+            <a href="">index</a>
+            <a>&gt;&gt;</a>
+            <a href="">favorite</a>
+            <a>&gt;&gt;</a>
+            <a href="">most popular</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <br />
+    <br />
+    <div class="info-top-bar" style="border:2px solid #24292e">
+        <div class="selected-info">
+            <div class="selected-title">You select:</div>
+            <div class="selected-stuff-info">
+                <a href="">MineCraft</a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="selected-info">
+            <div class="selected-title">Price:</div>
+            <div class="selected-stuff-info">
+                <a>$150</a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="selected-info">
+            <div class="selected-title">Inc:</div>
+            <div class="selected-stuff-info">
+                <a>Ubisoft entertainment .Inc</a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="selected-info" style="border-bottom: 0">
+            <div class="selected-title">Discount:</div>
+            <div class="selected-stuff-info">
+                <a>15% OFF</a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="info-top-bar" style="margin-top: 0">
+        <div id="selected-bottom">
+            <a href="">显示更多</a>
+        </div>
+    </div>
+    <div class="info-top-bar" style="border:2px solid lightgrey;background-color: lightsteelblue">
+        <div class="order">排序</div>
+        <div class="order">
+            <select>
+                <option>价格</option>
+                <option>低到高</option>
+                <option>高到低</option>
+            </select>
+        </div>
+        <div class="order">
+            <select>
+                <option>销量</option>
+                <option>低到高</option>
+                <option>高到低</option>
+            </select>
+        </div>
+        <div class="order">
+            <select>
+                <option>评价</option>
+                <option>低到高</option>
+                <option>高到低</option>
+            </select>
+        </div>
+        <div class="order2" style="width: 60px;margin-top: -1px">
+            <input type="button" value="<">
+            <input type="button" value=">">
+        </div>
+        <div class="order2" style="width: 70px">1/675</div>
+        <div class="order2" style="width: 120px">共xxx件商品</div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="info-top-bar">
+        <div class="stuff-item">
+            <img class="icons" src="images/game1.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$159</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game2.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$233</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game3.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$168</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game4.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$99</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game5.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$138</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game2.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$199</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game3.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$49</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px"value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game4.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$159</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game5.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$159</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game1.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$359</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game1.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$159</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game2.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$159</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="stuff-item">
+            <img class="icons" src="images/game3.jpg">
+            <div class="stuff-description">
+                <a href="">March of Empires</a>
+            </div>
+            <div class="price-operation">
+                <div class="price">$176</div>
+                <div class="buy-button" style="float: right">
+                    <input type="button" value="Buy" style="height: 20px;width: 40px"/>
+                </div>
+                <div class="operation">
+                    <input type="button" value="+">
+                    <input type="text" style="height: 16px" value="0">
+                    <input type="button" value="-">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div style="clear: both"></div>
+
+</div>
+
+</body>
+</html>
